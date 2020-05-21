@@ -7,7 +7,9 @@ const Home = () => {
   return (
     <Container className="Buttons">
       <Row className="justify-content-md-center ">
-        <h1 className="Welcome">DrawBit</h1>
+        <h1 className="Welcome">
+          <span className="rainbow-text">DrawBit</span>
+        </h1>
       </Row>
       <Row className="justify-content-md-center">
         <Link to="/login">
