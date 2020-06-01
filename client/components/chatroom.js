@@ -93,53 +93,62 @@ export default class Chatroom extends Component {
         </Row>
         <Row className="chat-main">
           <Col md={4} className="chat-sidebar">
-            <h1>Users in Lobby:</h1>
-            <ul>
-              {this.props.inRoom.map((user) => {
-                return <h2 key={user.id}>{user.name}</h2>
-              })}
-            </ul>
-            <h1>
-              Current Artist:
-              {this.props.user.name === this.props.currentArtist.name
-                ? ' YOU!'
-                : ' ' + this.props.currentArtist.name}
-            </h1>
-            {this.props.user.name === this.props.currentArtist.name ? (
-              <Button
-                type="button"
-                variant="light"
-                onClick={this.props.handlePass}
-                className="sidebar-button"
-              >
-                Pass The Paintbrush
-              </Button>
-            ) : null}
-            {this.props.user.name === this.props.currentArtist.name ? (
-              <div>
-                <h1>Your word is: {this.props.gameWord.toUpperCase()} </h1>
-                <Button
-                  type="button"
-                  variant="light"
-                  onClick={this.props.wordGenerator}
-                  className="sidebar-button"
-                >
-                  Regenerate Word
-                </Button>
-              </div>
-            ) : (
-              <div>
-                <br />
-                <br />
-                <br />
-                <br />
-                <h4>
-                  <Badge variant="light">
-                    Waiting for Artist to start game
-                  </Badge>
-                </h4>
-              </div>
-            )}
+            <Row className="justify-content-center">
+              <Col xs={4} md={12}>
+                <h1>Users in Lobby:</h1>
+                <ul>
+                  {this.props.inRoom.map((user) => {
+                    return <h2 key={user.id}>{user.name}</h2>
+                  })}
+                </ul>
+              </Col>
+              <Col xs={4} md={12}>
+                <h1>
+                  Current Artist:
+                  {this.props.user.name === this.props.currentArtist.name
+                    ? ' YOU!'
+                    : ' ' + this.props.currentArtist.name}
+                </h1>
+                {this.props.user.name === this.props.currentArtist.name ? (
+                  <Col md={8} className="justify-content-center">
+                    <Button
+                      type="button"
+                      variant="light"
+                      onClick={this.props.handlePass}
+                      className="sidebar-button"
+                    >
+                      Pass The Paintbrush
+                    </Button>
+                  </Col>
+                ) : null}
+              </Col>
+              <Col xs={4} md={12}>
+                {this.props.user.name === this.props.currentArtist.name ? (
+                  <div>
+                    <h1>Your word is: {this.props.gameWord.toUpperCase()} </h1>
+                    <Col md={8} className="justify-content-center">
+                      <Button
+                        type="button"
+                        variant="light"
+                        onClick={this.props.wordGenerator}
+                        className="sidebar-button"
+                        block
+                      >
+                        Regenerate Word
+                      </Button>
+                    </Col>
+                  </div>
+                ) : (
+                  <div>
+                    <h4>
+                      <Badge variant="light">
+                        Waiting for Artist to start game
+                      </Badge>
+                    </h4>
+                  </div>
+                )}
+              </Col>
+            </Row>
           </Col>
           <Col md={8} className="chat-messages">
             {this.state.messages.map((message, index) => (
@@ -169,6 +178,7 @@ export default class Chatroom extends Component {
               Leave Lobby
             </Button>
             <input
+              className="chat-input"
               name="message"
               type="text"
               placeholder="Enter Message"
