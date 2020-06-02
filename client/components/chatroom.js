@@ -117,7 +117,7 @@ export default class Chatroom extends Component {
                       onClick={this.props.handlePass}
                       className="sidebar-button"
                     >
-                      Pass The Paintbrush
+                      <div className="button-text">Pass The Paintbrush</div>
                     </Button>
                   </Col>
                 ) : null}
@@ -134,7 +134,7 @@ export default class Chatroom extends Component {
                         className="sidebar-button"
                         block
                       >
-                        Regenerate Word
+                        <div className="button-text">Regenerate Word</div>
                       </Button>
                     </Col>
                   </div>
@@ -175,7 +175,7 @@ export default class Chatroom extends Component {
               onClick={this.props.handleClick}
               className="chat-button"
             >
-              Leave Lobby
+              <div className="button-text">Leave Lobby</div>
             </Button>
             <input
               className="chat-input"
@@ -186,7 +186,9 @@ export default class Chatroom extends Component {
               onChange={this.handleChange}
             />
             <Button type="submit" variant="primary" className="chat-button">
-              Send <AiOutlineSend />
+              <div className="button-text">
+                Send <AiOutlineSend />
+              </div>
             </Button>
           </form>
         </Row>

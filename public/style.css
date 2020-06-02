@@ -126,6 +126,9 @@ Drawbit header
   .chat-input {
     width: 10em;
   }
+  .button-text {
+    font-size: 0.4em;
+  }
 }
 
 @media (min-width: 500px) {
@@ -187,6 +190,9 @@ Drawbit header
     margin: 0px 10px 50px 10px;
     float: none;
     display: block;
+  }
+  .button-text {
+    font-size: 1.5em;
   }
 }
 
