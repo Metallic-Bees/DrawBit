@@ -438,18 +438,18 @@ async function seed() {
   //   await User.create(users[i])
   // }
 
-  // await User.create({
-  //   name: 'Picasso',
-  //   email: 'picasso.com',
-  //   password: 'picasso',
-  //   isGuest: false,
-  //   imageUrl:
-  //     'https://www.onthisday.com/images/people/pablo-picasso-medium.jpg',
-  //   wins: 56,
-  //   gamesPlayed: 62,
-  //   munnyPoints: 172,
-  //   isArtist: true,
-  // })
+  await User.create({
+    name: 'Picasso',
+    email: 'picasso.com',
+    password: 'picasso',
+    isGuest: false,
+    imageUrl:
+      'https://www.onthisday.com/images/people/pablo-picasso-medium.jpg',
+    wins: 56,
+    gamesPlayed: 62,
+    munnyPoints: 172,
+    isArtist: true,
+  })
 
   // for (let i = 0; i < games.length; i++) {
   //   await Game.create(games[i])
