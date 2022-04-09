@@ -52,7 +52,7 @@
     "express-session": "^1.15.1",
     "history": "^4.9.0",
     "howler": "^2.2.0",
-    "moment": "^2.25.3",
+    "moment": "^2.29.2",
     "morgan": "^1.9.1",
     "passport": "^0.4.0",
     "passport-google-oauth": "^2.0.0",
